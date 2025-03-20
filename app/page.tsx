@@ -23,8 +23,6 @@ export default function Home() {
       <SkillSection skills={skills} />
 
       <Footer />
-      
-      {/* <AIChat /> */}
     </main>
   )
 }
