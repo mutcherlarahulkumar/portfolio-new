@@ -3,12 +3,26 @@ import { motion } from 'framer-motion'
 import { CodeBracketIcon } from '@heroicons/react/24/solid'
 import { FaGithub } from 'react-icons/fa'
 
-export default function ProjectSection({ projects }: any) {
+// Define a type for the project data
+interface Project {
+  title: string;
+  date: string;
+  description: string;
+  tech: string[];
+  github?: string;
+}
+
+// Define the props type
+interface ProjectSectionProps {
+  projects: Project[];
+}
+
+export default function ProjectSection({ projects }: ProjectSectionProps) {
   return (
     <section className="my-20 px-6" id='projects'>
       <h2 className="text-4xl font-bold text-[#2563eb] mb-12 text-center">Top Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {projects.map((project: any, index: number) => (
+        {projects.map((project, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
@@ -36,7 +50,7 @@ export default function ProjectSection({ projects }: any) {
             </div>
             <p className="text-gray-600 mb-4">{project.description}</p>
             <div className="flex flex-wrap gap-2">
-              {project.tech.map((tech: string, idx: number) => (
+              {project.tech.map((tech, idx) => (
                 <span key={idx} className="px-3 py-1 bg-[#2563eb]/20 text-[#2563eb] rounded-full text-xs font-semibold">
                   {tech}
                 </span>
@@ -47,5 +61,5 @@ export default function ProjectSection({ projects }: any) {
         ))}
       </div>
     </section>
-  )
+  );
 }

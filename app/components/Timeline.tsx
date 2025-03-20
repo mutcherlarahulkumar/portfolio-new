@@ -2,7 +2,18 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const TimelineItem = ({ item, index }: any) => {
+interface TimelineItemProps {
+  item: {
+    title: string;
+    institution: string;
+    date: string;
+    description: string;
+    fullDesc: string;
+  };
+  index: number;
+}
+
+const TimelineItem = ({ item, index }: TimelineItemProps) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -35,13 +46,17 @@ const TimelineItem = ({ item, index }: any) => {
   );
 };
 
-export default function Timeline({ items }: any) {
+interface TimelineProps {
+  items: TimelineItemProps['item'][];
+}
+
+export default function Timeline({ items }: TimelineProps) {
   return (
     <div className="relative container mx-auto px-6 py-12">
       {/* Vertical Thread */}
       <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-400 to-purple-600 h-full" />
       
-      {items.map((item: any, index: number) => (
+      {items.map((item, index) => (
         <TimelineItem key={index} item={item} index={index} />
       ))}
     </div>

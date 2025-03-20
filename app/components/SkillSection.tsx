@@ -1,8 +1,18 @@
-'use client'
-import { motion } from 'framer-motion'
-import SkillBadge from './SkillBadge'
+'use client';
+import { motion } from 'framer-motion';
+import SkillBadge from './SkillBadge';
 
-export default function SkillSection({ skills }: { skills: any[] }) {
+interface Skill {
+  name: string;
+  logo: string;
+  proficiency: string;
+}
+
+interface SkillSectionProps {
+  skills: Skill[];
+}
+
+export default function SkillSection({ skills }: SkillSectionProps) {
   return (
     <section className="my-20" id='skills'>
       <motion.div
@@ -16,12 +26,15 @@ export default function SkillSection({ skills }: { skills: any[] }) {
           {skills.map((skill, index) => (
             <SkillBadge 
               key={index}
-              skill={skill}
-              index={index}
+              skill={{
+                name: skill.name,
+                logo: skill.logo, // Ensure it's `logo` not `image`
+                proficiency: skill.proficiency || 'Intermediate' // Set default if missing
+              }}
             />
           ))}
         </div>
       </motion.div>
     </section>
-  )
+  );
 }
