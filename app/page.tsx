@@ -4,7 +4,6 @@ import Timeline from './components/Timeline'
 import ProjectSection from './components/ProjectSection'
 import SkillSection from './components/SkillSection'
 import { education, experiences, projects, skills } from '../data/dummyData'
-import AIChat from './components/AIChat'
 import Footer from './components/Footer'
 
 export default function Home() {

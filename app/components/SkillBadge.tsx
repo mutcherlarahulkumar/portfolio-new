@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import { BeakerIcon, CodeBracketIcon } from '@heroicons/react/24/solid';
 
 const SkillBadge = ({ skill }: any) => {
   return (

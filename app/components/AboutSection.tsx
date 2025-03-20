@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import { FaLinkedin, FaGithub, FaYoutube } from 'react-icons/fa'
 
 export default function AboutPage() {
   return (
