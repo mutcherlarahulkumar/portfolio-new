@@ -110,20 +110,26 @@ export const skills = [
   {
     name: "TypeScript",
     category: "Languages",
-    proficiency: "Intermediate",
+    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
   },
   {
     name: "C/C++",
     category: "Languages",
-    proficiency: "Intermediate",
+    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
   },
   {
     name: "SQL",
     category: "Languages",
-    proficiency: "Intermediate",
+    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "Python",
+    category: "Languages",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
   },
 
   // Frameworks
@@ -136,19 +142,19 @@ export const skills = [
   {
     name: "Next.js",
     category: "Frameworks",
-    proficiency: "Intermediate",
+    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
   },
   {
     name: "Node.js",
     category: "Frameworks",
-    proficiency: "Intermediate",
+    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "Express.js",
     category: "Frameworks",
-    proficiency: "Intermediate",
+    proficiency: "`Intermediate`",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
   },
   {
@@ -160,7 +166,7 @@ export const skills = [
   {
     name: "gRPC / Protobuf",
     category: "Frameworks",
-    proficiency: "Intermediate",
+    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grpc/grpc-original.svg",
   },
   {
