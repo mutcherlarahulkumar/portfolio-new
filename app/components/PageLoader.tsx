@@ -1,78 +1,108 @@
-'use client'
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+"use client";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const letters = ['R', 'a', 'h', 'u', 'l']
+const LETTERS = ["R", "A", "H", "U", "L"];
 
-export default function PageLoader({ children }: { children: React.ReactNode }) {
-  const [loading, setLoading] = useState(true)
+export default function PageLoader({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 2400)
-    return () => clearTimeout(t)
-  }, [])
+    const t = setTimeout(() => setShow(false), 3200);
+    return () => clearTimeout(t);
+  }, []);
 
   return (
     <>
       <AnimatePresence>
-        {loading && (
+        {show && (
           <motion.div
             key="loader"
-            exit={{ y: '-100%' }}
-            transition={{ duration: 0.75, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-[99999] bg-[#080c16] flex flex-col items-center justify-center gap-6"
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
+            className="fixed inset-0 z-[99999] flex items-center justify-center"
+            style={{ backgroundColor: "#000" }}
           >
-            {/* Grid bg so it matches the site */}
-            <div className="absolute inset-0 grid-bg pointer-events-none" />
+            {/* Subtle radial glow */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse 60% 40% at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%)",
+              }}
+            />
 
-            {/* Ambient glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-
-            {/* Name */}
-            <div className="relative flex items-end gap-1 md:gap-2">
-              {letters.map((letter, i) => (
-                <motion.span
-                  key={i}
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.45, delay: 0.15 + i * 0.09, ease: 'easeOut' }}
-                  className="text-6xl sm:text-7xl md:text-8xl font-bold gradient-text leading-none select-none"
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </div>
-
-            {/* Subtitle */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.75 }}
-              className="relative text-slate-500 text-xs tracking-[0.35em] uppercase"
-              style={{ fontFamily: 'var(--font-mono, ui-monospace, monospace)' }}
-            >
-              Full-Stack Developer · AI Enthusiast
-            </motion.p>
-
-            {/* Progress bar */}
-            <motion.div
-              className="relative w-28 h-px bg-slate-800 overflow-hidden rounded-full"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-            >
+            <div className="relative flex items-center">
+              {/* Left line — expands rightward from text edge outward */}
               <motion.div
-                className="absolute inset-y-0 left-0 bg-gradient-to-r from-blue-500 via-violet-500 to-emerald-400"
-                initial={{ width: '0%' }}
-                animate={{ width: '100%' }}
-                transition={{ duration: 1.6, delay: 0.7, ease: 'easeInOut' }}
+                initial={{ scaleX: 0, opacity: 0 }}
+                animate={{ scaleX: 1, opacity: 1 }}
+                transition={{ duration: 1.1, delay: 0.55, ease: [0.25, 0.1, 0.25, 1] }}
+                className="w-28 sm:w-44 md:w-64 lg:w-80 h-px"
+                style={{
+                  background: "linear-gradient(to left, rgba(255,255,255,0.35), transparent)",
+                  transformOrigin: "right center",
+                }}
               />
-            </motion.div>
+
+              {/* Name */}
+              <div className="relative flex items-center px-6 sm:px-10 overflow-hidden">
+                {LETTERS.map((letter, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.75,
+                      delay: 0.12 + i * 0.09,
+                      ease: [0.25, 0.1, 0.25, 1],
+                    }}
+                    className="select-none text-white/90"
+                    style={{
+                      fontFamily: 'Georgia, "Times New Roman", serif',
+                      fontSize: "clamp(2.5rem, 8vw, 5.5rem)",
+                      fontWeight: 300,
+                      letterSpacing: "0.38em",
+                    }}
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+
+                {/* Shimmer sweep */}
+                <motion.div
+                  initial={{ x: "-120%" }}
+                  animate={{ x: "120%" }}
+                  transition={{ duration: 1.1, delay: 1.2, ease: "easeInOut" }}
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%)",
+                  }}
+                />
+              </div>
+
+              {/* Right line — expands leftward from text edge outward */}
+              <motion.div
+                initial={{ scaleX: 0, opacity: 0 }}
+                animate={{ scaleX: 1, opacity: 1 }}
+                transition={{ duration: 1.1, delay: 0.55, ease: [0.25, 0.1, 0.25, 1] }}
+                className="w-28 sm:w-44 md:w-64 lg:w-80 h-px"
+                style={{
+                  background: "linear-gradient(to right, rgba(255,255,255,0.35), transparent)",
+                  transformOrigin: "left center",
+                }}
+              />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
 
       {children}
     </>
-  )
+  );
 }

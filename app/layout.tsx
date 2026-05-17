@@ -16,7 +16,8 @@ export const metadata: Metadata = {
   description:
     "Full-stack developer specializing in Go microservices, gRPC APIs, and modern web applications.",
   icons: {
-    icon: "/ginal01.jpg",
+    icon: [{ url: "/ginal01.jpg", type: "image/jpeg" }],
+    shortcut: "/ginal01.jpg",
   },
 };
 
