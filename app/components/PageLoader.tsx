@@ -51,7 +51,7 @@ export default function PageLoader({ children }: { children: React.ReactNode }) 
               className="relative text-slate-500 text-xs tracking-[0.35em] uppercase"
               style={{ fontFamily: 'var(--font-mono, ui-monospace, monospace)' }}
             >
-              Backend Developer · Go Engineer
+              Full-Stack Developer · AI Enthusiast
             </motion.p>
 
             {/* Progress bar */}

@@ -74,28 +74,38 @@ export default function AboutSection() {
               <span className="text-blue-400 font-semibold">
                 Rahul Kumar Mutcherla
               </span>
-              , currently pursuing a B.Tech in Computer Science at{" "}
-              <span className="text-violet-400">
+              , a{" "}
+              <span className="text-emerald-400 font-semibold">
+                full-stack developer
+              </span>{" "}
+              and{" "}
+              <span className="text-violet-400 font-semibold">
+                AI enthusiast
+              </span>
+              . Currently working as a{" "}
+              <span className="text-blue-400 font-semibold">
+                Trainee Software Engineer at Afford Medical Technologies
+              </span>
+              , shipping production-grade backend systems in a fast-paced
+              startup environment.
+            </p>
+            <p className="text-slate-400 text-lg leading-relaxed">
+              I build end-to-end products — scalable Go microservices and gRPC
+              APIs on the backend, paired with responsive React interfaces on
+              the front. B.Tech in Computer Science from{" "}
+              <span className="text-slate-300">
                 Anil Neerukonda Institute of Technology and Sciences
               </span>{" "}
               with a CGPA of 9.22.
             </p>
             <p className="text-slate-400 text-lg leading-relaxed">
-              I specialize in{" "}
-              <span className="text-emerald-400 font-semibold">
-                backend development
-              </span>{" "}
-              with Go, building scalable microservices and high-performance gRPC
-              APIs. Currently a Trainee Software Engineer at{" "}
-              <span className="text-blue-400 font-semibold">
-                Afford Medical Technologies
+              Deeply passionate about{" "}
+              <span className="text-violet-400 font-semibold">
+                AI and large language models
               </span>
-              , designing and shipping production backend systems.
-            </p>
-            <p className="text-slate-400 text-lg leading-relaxed">
-              On the full-stack side, I build React frontends, design REST APIs,
-              and integrate AI-powered features — always with a focus on clean
-              architecture and scalability.
+              — I actively explore integrating LLMs and intelligent features
+              into real-world applications, always aiming for clean architecture
+              and meaningful user impact.
             </p>
 
             {/* Focus area chips */}
@@ -108,7 +118,9 @@ export default function AboutSection() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + i * 0.06 }}
                   className="text-xs px-3 py-1.5 rounded-full bg-slate-800/70 border border-slate-700/60 text-slate-400"
-                  style={{ fontFamily: "var(--font-mono, ui-monospace, monospace)" }}
+                  style={{
+                    fontFamily: "var(--font-mono, ui-monospace, monospace)",
+                  }}
                 >
                   {f}
                 </motion.span>
@@ -166,9 +178,13 @@ export default function AboutSection() {
                   className="glass-card rounded-xl overflow-hidden"
                 >
                   {/* Colored accent bar */}
-                  <div className={`h-0.5 w-full bg-gradient-to-r ${stat.accent}`} />
+                  <div
+                    className={`h-0.5 w-full bg-gradient-to-r ${stat.accent}`}
+                  />
                   <div className="p-5">
-                    <div className={`text-2xl font-bold leading-none ${stat.valueColor}`}>
+                    <div
+                      className={`text-2xl font-bold leading-none ${stat.valueColor}`}
+                    >
                       {stat.value}
                       {stat.unit && (
                         <span className="text-base font-semibold ml-1 opacity-70">
@@ -178,7 +194,9 @@ export default function AboutSection() {
                     </div>
                     <div
                       className="text-xs text-slate-500 mt-2 uppercase tracking-[0.15em]"
-                      style={{ fontFamily: "var(--font-mono, ui-monospace, monospace)" }}
+                      style={{
+                        fontFamily: "var(--font-mono, ui-monospace, monospace)",
+                      }}
                     >
                       {stat.label}
                     </div>
@@ -206,7 +224,9 @@ export default function AboutSection() {
                   </p>
                   <p
                     className="text-xs text-yellow-500/80 mt-0.5"
-                    style={{ fontFamily: "var(--font-mono, ui-monospace, monospace)" }}
+                    style={{
+                      fontFamily: "var(--font-mono, ui-monospace, monospace)",
+                    }}
                   >
                     LeetCode · Data Structures & Algorithms
                   </p>
@@ -233,7 +253,9 @@ export default function AboutSection() {
                   </p>
                   <p
                     className="text-xs text-slate-500 mt-0.5"
-                    style={{ fontFamily: "var(--font-mono, ui-monospace, monospace)" }}
+                    style={{
+                      fontFamily: "var(--font-mono, ui-monospace, monospace)",
+                    }}
                   >
                     Postman · March 2024
                   </p>
@@ -260,7 +282,9 @@ export default function AboutSection() {
                   </p>
                   <p
                     className="text-xs text-emerald-400 mt-0.5"
-                    style={{ fontFamily: "var(--font-mono, ui-monospace, monospace)" }}
+                    style={{
+                      fontFamily: "var(--font-mono, ui-monospace, monospace)",
+                    }}
                   >
                     Afford Medical Technologies · May 2025 – Present
                   </p>

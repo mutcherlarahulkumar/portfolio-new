@@ -2,7 +2,7 @@ export const education = [
   {
     title: "B.Tech - Computer Science & Engineering",
     institution: "Anil Neerukonda Institute of Technology and Sciences (ANITS)",
-    date: "Sept 2022 – Present",
+    date: "Sept 2022 – May 2026",
     description: "CGPA: 9.22 / 10.0",
     type: "education",
     fullDesc:
