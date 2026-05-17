@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 interface Skill {
   name: string
   logo: string
-  proficiency: string
   category?: string
 }
 

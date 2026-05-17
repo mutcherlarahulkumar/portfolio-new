@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 interface Skill {
   name: string
   logo: string
-  proficiency: string
   category: string
 }
 
@@ -13,27 +12,10 @@ interface SkillSectionProps {
 }
 
 const categories = [
-  {
-    id: 'Languages',
-    label: 'Languages',
-    color: 'text-blue-400',
-    badgeColor: 'text-blue-400',
-    badgeBg: 'bg-blue-500/8 border-blue-500/25',
-  },
-  {
-    id: 'Frameworks',
-    label: 'Frameworks & Libraries',
-    color: 'text-violet-400',
-    badgeColor: 'text-violet-400',
-    badgeBg: 'bg-violet-500/8 border-violet-500/25',
-  },
-  {
-    id: 'Tools',
-    label: 'Tools & Databases',
-    color: 'text-emerald-400',
-    badgeColor: 'text-emerald-400',
-    badgeBg: 'bg-emerald-500/8 border-emerald-500/25',
-  },
+  { id: 'Languages', label: 'Languages', color: 'text-blue-400' },
+  { id: 'Frameworks', label: 'Frameworks & Libraries', color: 'text-violet-400' },
+  { id: 'Tools', label: 'Tools & Databases', color: 'text-emerald-400' },
+  { id: 'Patterns', label: 'Patterns & Architecture', color: 'text-amber-400' },
 ]
 
 export default function SkillSection({ skills }: SkillSectionProps) {
@@ -55,7 +37,7 @@ export default function SkillSection({ skills }: SkillSectionProps) {
           </h2>
         </motion.div>
 
-        <div className="space-y-12">
+        <div className="space-y-10 md:space-y-14">
           {categories.map((cat, catIndex) => {
             const catSkills = skills.filter((s) => s.category === cat.id)
             if (catSkills.length === 0) return null
@@ -68,45 +50,39 @@ export default function SkillSection({ skills }: SkillSectionProps) {
                 viewport={{ once: true }}
                 transition={{ delay: catIndex * 0.12 }}
               >
-                {/* Category label */}
-                <h3
-                  className={`text-xs font-bold uppercase tracking-[0.2em] mb-6 ${cat.color}`}
-                  style={{ fontFamily: 'var(--font-mono, ui-monospace, monospace)' }}
-                >
-                  / {cat.label}
-                </h3>
+                {/* Category label with rule */}
+                <div className="flex items-center gap-4 mb-6">
+                  <h3
+                    className={`text-xs font-bold uppercase tracking-[0.2em] shrink-0 ${cat.color}`}
+                    style={{ fontFamily: 'var(--font-mono, ui-monospace, monospace)' }}
+                  >
+                    / {cat.label}
+                  </h3>
+                  <div className="flex-1 h-px bg-slate-800" />
+                </div>
 
                 {/* Skill pills */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2.5 md:gap-3">
                   {catSkills.map((skill, i) => (
                     <motion.div
                       key={skill.name}
                       initial={{ opacity: 0, scale: 0.88 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ delay: catIndex * 0.12 + i * 0.045 }}
+                      transition={{ delay: catIndex * 0.12 + i * 0.04 }}
                       className="skill-pill"
                     >
-                      {/* Icon */}
-                      <img
-                        src={skill.logo}
-                        alt={skill.name}
-                        className="w-5 h-5 object-contain flex-shrink-0"
-                        onError={(e) => {
-                          ;(e.target as HTMLImageElement).style.display = 'none'
-                        }}
-                      />
-
-                      {/* Name */}
-                      <span className="text-sm text-slate-300 font-medium">{skill.name}</span>
-
-                      {/* Proficiency chip */}
-                      <span
-                        className={`text-xs px-2 py-0.5 rounded-full border ${cat.badgeBg} ${cat.badgeColor}`}
-                        style={{ fontFamily: 'var(--font-mono, ui-monospace, monospace)' }}
-                      >
-                        {skill.proficiency}
-                      </span>
+                      {skill.logo && (
+                        <img
+                          src={skill.logo}
+                          alt={skill.name}
+                          className="w-4 h-4 md:w-5 md:h-5 object-contain flex-shrink-0"
+                          onError={(e) => {
+                            ;(e.target as HTMLImageElement).style.display = 'none'
+                          }}
+                        />
+                      )}
+                      <span className="text-xs md:text-sm font-medium text-slate-200">{skill.name}</span>
                     </motion.div>
                   ))}
                 </div>

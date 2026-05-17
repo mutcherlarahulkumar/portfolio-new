@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import PageLoader from "./components/PageLoader";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const mono = JetBrains_Mono({
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
   title: "Rahul Kumar Mutcherla - Backend Developer & Go Engineer",
   description:
     "Full-stack developer specializing in Go microservices, gRPC APIs, and modern web applications.",
+  icons: {
+    icon: "/ginal01.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -32,8 +36,10 @@ export default function RootLayout({
         <div className="fixed bottom-1/4 -right-32 w-[500px] h-[500px] bg-violet-600/[0.035] rounded-full blur-3xl pointer-events-none -z-10" />
         <div className="fixed top-3/4 left-1/2 w-[300px] h-[300px] bg-emerald-600/[0.02] rounded-full blur-3xl pointer-events-none -z-10" />
 
-        <Navbar />
-        {children}
+        <PageLoader>
+          <Navbar />
+          {children}
+        </PageLoader>
       </body>
     </html>
   );

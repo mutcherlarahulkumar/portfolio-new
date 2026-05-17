@@ -98,125 +98,137 @@ export const skills = [
   {
     name: "Go",
     category: "Languages",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
   },
   {
     name: "JavaScript",
     category: "Languages",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
   },
   {
     name: "TypeScript",
     category: "Languages",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
   },
   {
     name: "C/C++",
     category: "Languages",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
   },
   {
     name: "SQL",
     category: "Languages",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
   },
   {
     name: "Python",
     category: "Languages",
-    proficiency: "Intermediate",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
   },
 
-  // Frameworks
+  // Frameworks & Libraries
   {
     name: "React.js",
     category: "Frameworks",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
   },
   {
     name: "Next.js",
     category: "Frameworks",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
   },
   {
     name: "Node.js",
     category: "Frameworks",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "Express.js",
     category: "Frameworks",
-    proficiency: "`Intermediate`",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
   },
   {
-    name: "Gin-Gonic",
+    name: "Gin",
     category: "Frameworks",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
   },
   {
-    name: "gRPC / Protobuf",
+    name: "gRPC",
     category: "Frameworks",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grpc/grpc-original.svg",
+  },
+  {
+    name: "Protocol Buffers",
+    category: "Frameworks",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/protobuf/protobuf-original.svg",
   },
   {
     name: "Tailwind CSS",
     category: "Frameworks",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
     name: "Material-UI",
     category: "Frameworks",
-    proficiency: "Intermediate",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
   },
 
-  // Tools & DBs
+  // Tools & Databases
   {
     name: "Git",
     category: "Tools",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+  },
+  {
+    name: "GitHub",
+    category: "Tools",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
   },
   {
     name: "Docker",
     category: "Tools",
-    proficiency: "Intermediate",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
   },
   {
-    name: "Postman",
+    name: "Kafka",
     category: "Tools",
-    proficiency: "Advanced",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original-wordmark.svg",
   },
   {
     name: "PostgreSQL",
     category: "Tools",
-    proficiency: "Intermediate",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
   },
   {
     name: "MongoDB",
     category: "Tools",
-    proficiency: "Intermediate",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "Redis",
+    category: "Tools",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
+  },
+  {
+    name: "Postman",
+    category: "Tools",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+  },
+  {
+    name: "Linux",
+    category: "Tools",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
   },
   {
     name: "VS Code",
     category: "Tools",
-    proficiency: "Advanced",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
   },
+
+  // Patterns & Architecture
+  { name: "Microservices", category: "Patterns", logo: "" },
+  { name: "Event-Driven Architecture", category: "Patterns", logo: "" },
+  { name: "REST API Design", category: "Patterns", logo: "" },
+  { name: "Clean Architecture", category: "Patterns", logo: "" },
+  { name: "Domain-Driven Design", category: "Patterns", logo: "" },
 ];
