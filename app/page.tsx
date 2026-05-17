@@ -6,22 +6,41 @@ import SkillSection from './components/SkillSection'
 import { education, experiences, projects, skills } from '../data/dummyData'
 import Footer from './components/Footer'
 
+function SectionHeading({ label, title, accent }: { label: string; title: string; accent: string }) {
+  return (
+    <div className="text-center mb-16">
+      <span className="section-label mb-3">{label}</span>
+      <h2 className="text-4xl font-bold text-slate-100 mt-2">
+        {title} <span className="gradient-text">{accent}</span>
+      </h2>
+    </div>
+  )
+}
+
 export default function Home() {
   return (
-    <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <main>
       <HeroSection />
       <AboutSection />
-      
-      <section className="my-20">
-        <h2 className="text-4xl font-bold text-[#2563eb] mb-12 text-center" id='education'>Education </h2>
-        <Timeline items={[...education]} />
-        <h2 className="text-4xl font-bold text-[#2563eb] mb-12 text-center pt-12 mt-12" id='experience'>Experience </h2>
-        <Timeline items={[...experiences]} />
+
+      {/* Education */}
+      <section id="education" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading label="Academic journey" title="My" accent="Education" />
+          <Timeline items={[...education]} />
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section id="experience" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading label="Where I've worked" title="Work" accent="Experience" />
+          <Timeline items={[...experiences]} />
+        </div>
       </section>
 
       <ProjectSection projects={projects} />
       <SkillSection skills={skills} />
-
       <Footer />
     </main>
   )

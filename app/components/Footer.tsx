@@ -1,48 +1,102 @@
-import { Dancing_Script } from "next/font/google";
+import Link from 'next/link'
+import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
+import { HiMail } from 'react-icons/hi'
 
-const dancingScript = Dancing_Script({ subsets: ["latin"], weight: "700" });
+const navLinks = [
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
+]
 
-const Footer = () => {
+const socialLinks = [
+  {
+    icon: FaGithub,
+    href: 'https://github.com/mutcherlarahulkumar',
+    label: 'GitHub',
+    hover: 'hover:text-white',
+  },
+  {
+    icon: FaLinkedin,
+    href: 'https://www.linkedin.com/in/rahul-kumar-mutcherla-91022524b/',
+    label: 'LinkedIn',
+    hover: 'hover:text-blue-400',
+  },
+  {
+    icon: FaYoutube,
+    href: 'https://www.youtube.com/@codeNoob-vo1ox',
+    label: 'YouTube',
+    hover: 'hover:text-red-500',
+  },
+  {
+    icon: HiMail,
+    href: 'mailto:rahulkumarmutcherla@gmail.com',
+    label: 'Email',
+    hover: 'hover:text-blue-400',
+  },
+]
+
+export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="container mx-auto text-center">
-        {/* Name with Handwritten Font */}
-        <h2 className={`${dancingScript.className} text-3xl text-yellow-400`}>
-          Rahul Kumar Mutcherla
-        </h2>
-        <p className="text-gray-400 text-sm mt-1">
-          Full-Stack Developer | Passionate about building great experiences
-        </p>
+    <footer className="border-t border-slate-800/60 py-12 mt-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
-        {/* Social Icons */}
-        <div className="flex justify-center space-x-6 mt-4">
-          <a href="https://www.youtube.com/@codeNoob-vo1ox" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-400 text-2xl transition-all duration-300">
-            <i className='bx bxl-youtube'></i>
-          </a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-400 text-2xl transition-all duration-300">
-            <i className='bx bxl-instagram'></i>
-          </a>
-          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 text-2xl transition-all duration-300">
-            <i className='bx bxl-twitter'></i>
-          </a>
-          <a href="https://www.linkedin.com/in/rahulkumarmutcherla/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 text-2xl transition-all duration-300">
-            <i className='bx bxl-linkedin'></i>
-          </a>
-          <a href="https://github.com/RahulKumarMutcherla" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-300 text-2xl transition-all duration-300">
-            <i className='bx bxl-github'></i>
-          </a>
-          <a href="mailto:rahulkumarmutcherla@gmail.com" className="text-yellow-400 hover:text-yellow-300 text-2xl transition-all duration-300">
-            <i className='bx bxl-gmail'></i>
-          </a>
+          {/* Logo + tagline */}
+          <div className="text-center md:text-left">
+            <span
+              className="text-xl font-bold"
+              style={{ fontFamily: 'var(--font-mono, ui-monospace, monospace)' }}
+            >
+              <span className="gradient-text">RK</span>
+              <span className="text-slate-700">.</span>
+              <span className="text-slate-500">dev</span>
+            </span>
+            <p className="text-slate-600 text-xs mt-1">
+              Building the future, one line at a time.
+            </p>
+          </div>
+
+          {/* Nav links */}
+          <div className="flex flex-wrap justify-center gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-slate-600 hover:text-slate-300 text-sm transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Social icons */}
+          <div className="flex gap-5">
+            {socialLinks.map(({ icon: Icon, href, label, hover }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith('mailto') ? undefined : '_blank'}
+                rel="noopener noreferrer"
+                aria-label={label}
+                className={`text-slate-700 ${hover} transition-colors`}
+              >
+                <Icon className="h-5 w-5" />
+              </a>
+            ))}
+          </div>
         </div>
 
-        {/* Copyright */}
-        <p className="text-gray-500 text-sm mt-6">
-          &#169; {new Date().getFullYear()} All rights reserved
-        </p>
+        {/* Bottom bar */}
+        <div className="mt-8 pt-6 border-t border-slate-800/40 text-center">
+          <p
+            className="text-slate-700 text-xs"
+            style={{ fontFamily: 'var(--font-mono, ui-monospace, monospace)' }}
+          >
+            © {new Date().getFullYear()} Rahul Kumar Mutcherla &nbsp;·&nbsp; Built with Next.js &amp; Tailwind CSS
+          </p>
+        </div>
       </div>
     </footer>
-  );
-};
-
-export default Footer;
+  )
+}

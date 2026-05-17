@@ -1,117 +1,216 @@
 export const education = [
-    {
-      title: "B.Tech - Computer Science",
-      institution: "Anil Neerukonda Institute of Technology",
-      date: "2022 - Present",
-      description: "Engaged in diverse hands-on projects.",
-      type: "education",
-      fullDesc:"Developed diverse projects and hackathons. Passionate about teamwork, problem-solving, and building impactful solutions! "
-    },
-    {
-      title: "Intermediate - MPC",
-      institution: "Tirumala Junior College",
-      date: "2020 - 2022",
-      description: "Achieved 97.7% in Final Board Exams.",
-      type: "education",
-      fullDesc:"Graduated with Distinction, Specialised in Physics, Chemistry, and Maths."
-    },
-    {
-      title: "10th Grade",
-      institution: "Dr. Besant School",
-      date: "2019 - 2020",
-      description: "Achieved 98.8% in Final Board Exams.",
-      type: "education",
-      fullDesc:"Passed with Distinction"
-    }
-  ];
+  {
+    title: "B.Tech - Computer Science & Engineering",
+    institution: "Anil Neerukonda Institute of Technology and Sciences (ANITS)",
+    date: "Sept 2022 – Present",
+    description: "CGPA: 9.22 / 10.0",
+    type: "education",
+    fullDesc:
+      "Engaged in diverse hands-on projects and hackathons. Passionate about teamwork, problem-solving, and building impactful solutions.",
+  },
+  {
+    title: "Intermediate - MPC",
+    institution: "Tirumala Junior College, Visakhapatnam",
+    date: "Sept 2020 – Sept 2022",
+    description: "97.7% - Andhra Pradesh State Board (BIEAP)",
+    type: "education",
+    fullDesc:
+      "Graduated with Distinction. Specialized in Physics, Chemistry, and Mathematics.",
+  },
+  {
+    title: "10th Grade",
+    institution: "Dr. Besant School, Vizianagaram",
+    date: "Jun 2019 – Jun 2020",
+    description: "98.8% - Andhra Pradesh State Board (BSEAP)",
+    type: "education",
+    fullDesc: "Passed with Distinction.",
+  },
+];
 
-  
-  
-  export const experiences = [
-    {
-      title: "Web Developer Intern",
-      institution: "Impacgo Solutions",
-      date: "May 2024 - Jun 2024",
-      description: "Designed and developed company website, collaborated on multiple projects",
-      type: "experience",
-      fullDesc:"Gained hands-on experience in optimizing web performance while developing the company website. Actively participated in team discussions on project requirements, timelines, and development strategies, contributing valuable insights. Strengthened time management, teamwork, and problem-solving skills, with expertise in C++, HTML, CSS, JavaScript, API integration, Git, Node.js, and Express.js, driven by a passion for building scalable solutions and continuous learning."
-    },
-    {
-      title: "Intern",
-      institution: "Unified Mentor",
-      date: "Nov 2023 - Jan 2024",
-      description: "Worked on Frontend, Backend, and API Integration",
-      type: "experience",
-      fullDesc:"Developed a MERN stack website, optimizing image sizes, CSS, JavaScript, and caching mechanisms to enhance performance. Actively participated in team discussions on project requirements, timelines, and development strategies, contributing valuable insights. Leveraged hands-on experience in building responsive web applications to create a seamless and efficient user experience."
-    }
-  ];
-  
-  export const projects = [
-    {
-      title: "Sync Fission",
-      date: "May 2024",
-      description: "Developed a collaborative platform for students and tutors with live sessions, assignment help, resource sharing, and real-time communication.",
-      tech: ["React", "MERN Stack", "Chatbot Integration"],
-      github:"https://github.com/mutcherlarahulkumar/Sync-Fission.git"
-    },
-    {
-      title: "Bean Vantage",
-      date: "Feb 2025",
-      description: "Developed a coffee ordering website with user authentication, profile management, order history, and a seamless ordering experience. ",
-      tech: ["React", "MERN Stack", "Leaflet API"],
-      github:"https://github.com/mutcherlarahulkumar/beanvantage.git"
-    },
-    {
-      title: "Muzix",
-      date: "Dec 2024",
-      description: "A collaborative platform where users can create music rooms, add songs, upvote their favorite tracks, and enjoy a seamless music experience.",
-      tech: ["React", "MERN Stack", "Youtube"],
-      github:"https://github.com/mutcherlarahulkumar/muzix.git"
-    },
-    {
-      title: "AlumNex",
-      date: "Aug 2024",
-      description: "Developed Backend for an Alumni and Student Realationsship during an Hackathon",
-      tech: ["Express", "Mongo DB", "Payment Gateway","Stripe"],
-      github:"https://github.com/mutcherlarahulkumar/alumnex.git"
-    },
-    {
-      title: "Paytm Clone",
-      date: "April 2024",
-      description: "Payment platform clone with essential features",
-      tech: ["React", "MERN Stack", "Payment Gateway"],
-      github:"https://github.com/mutcherlarahulkumar/paytm_finaldraft_01.git"
-    },
-  ];
-  
-  export const skills = [
-    // Programming Languages
-    { name: "C++", proficiency: "Intermediate", logo: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" },
-    { name: "C", proficiency: "Intermediate", logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" },
-    { name: "Java", proficiency: "Intermediate", logo: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" },
-    { name: "JavaScript", proficiency: "Advanced", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
-    { name: "TypeScript", proficiency: "Intermediate", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
-    { name: "Python", proficiency: "Intermediate", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" },
-  
-    // Development / Frameworks
-    { name: "HTML", proficiency: "Advanced", logo: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" },
-    { name: "CSS", proficiency: "Advanced", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" },
-    { name: "Node.js", proficiency: "Intermediate", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" },
-    { name: "Express.js", proficiency: "Intermediate", logo: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" },
-    { name: "React.js", proficiency: "Advanced", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
-    { name: "Next.js", proficiency: "Intermediate", logo: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" },
-    { name: "API Integration", proficiency: "Intermediate", logo: "https://t3.ftcdn.net/jpg/05/97/37/46/360_F_597374605_tph8vB4RrkKvN2MT1gKeJUKerCR8LYu8.jpg" },
-    { name: "Frontend Development", proficiency: "Advanced", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
-    { name: "Backend Development", proficiency: "Intermediate", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" },
-    { name: "Git", proficiency: "Advanced", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" },
-  
-    // Tools & Databases
-    { name: "PostgreSQL", proficiency: "Intermediate", logo: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" },
-    { name: "Postman", proficiency: "Intermediate", logo: "https://t3.ftcdn.net/jpg/05/97/37/46/360_F_597374605_tph8vB4RrkKvN2MT1gKeJUKerCR8LYu8.jpg" },
-    { name: "Tailwind CSS", proficiency: "Advanced", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
-  
-    // AI/ML
-    { name: "AI/ML", proficiency: "Beginner", logo: "https://static.vecteezy.com/system/resources/thumbnails/010/586/407/small/artificial-intelligence-logo-human-face-electronic-circuit-grid-dynamic-line-and-point-symbol-with-human-head-virtual-assistant-service-icon-machine-learning-digital-brain-and-thought-process-free-vector.jpg" }
-  ];
-  
-  
+export const experiences = [
+  {
+    title: "Trainee Software Engineer",
+    institution: "Afford Medical Technologies",
+    date: "May 2025 – Present",
+    description:
+      "Designing scalable Go microservices with Gin-Gonic, gRPC APIs using Protocol Buffers, and React frontend components.",
+    type: "experience",
+    fullDesc:
+      "Owned end-to-end feature delivery in a fast-paced startup, translating evolving requirements into production-ready backend services. Applied clean architecture and domain-driven design. Developed high-performance REST and gRPC services under CI/CD-based deployment.",
+  },
+  {
+    title: "Software Developer Intern",
+    institution: "Impacgo Solutions",
+    date: "May 2024 – Jun 2024",
+    description:
+      "Owned end-to-end development of the company website with RESTful APIs using Node.js and Express.js.",
+    type: "experience",
+    fullDesc:
+      "Designed backend services focused on API performance and reliability. Structured codebase using modular architecture, enforcing clean coding standards and managing version control through Git-based workflows.",
+  },
+];
+
+export const projects = [
+  {
+    title: "Sync Fission",
+    date: "May 2024",
+    description:
+      "Full-stack collaborative platform for students and tutors with live sessions, REST APIs, database schemas, and an AI-powered chatbot integration.",
+    tech: ["React.js", "PostgreSQL", "Express.js", "AI Chatbot"],
+    github: "https://github.com/mutcherlarahulkumar/Sync-Fission.git",
+  },
+  {
+    title: "Muzix",
+    date: "Dec 2024",
+    description:
+      "Collaborative music platform where users create rooms, add songs, upvote tracks, and enjoy synchronized music streaming via YouTube API.",
+    tech: ["React", "Node.js", "MongoDB", "YouTube API"],
+    github: "https://github.com/mutcherlarahulkumar/muzix.git",
+  },
+  {
+    title: "Bean Vantage",
+    date: "Feb 2025",
+    description:
+      "Coffee ordering platform with user authentication, profile management, order history, and location-based services powered by Leaflet.",
+    tech: ["React", "MERN Stack", "Leaflet API"],
+    github: "https://github.com/mutcherlarahulkumar/beanvantage.git",
+  },
+  {
+    title: "AlumNex",
+    date: "Aug 2024",
+    description:
+      "Backend system for an Alumni-Student relationship platform built during a Hackathon, featuring payment gateway integration with Stripe.",
+    tech: ["Express.js", "MongoDB", "Stripe", "REST API"],
+    github: "https://github.com/mutcherlarahulkumar/alumnex.git",
+  },
+  {
+    title: "Digital Payments Platform",
+    date: "April 2024",
+    description:
+      "Full-stack Paytm-clone with authentication flows, backend REST APIs, database integration, and component-based frontend design.",
+    tech: ["React", "Node.js", "MongoDB", "REST API"],
+    github: "https://github.com/mutcherlarahulkumar/paytm_finaldraft_01.git",
+  },
+];
+
+export const skills = [
+  // Languages
+  {
+    name: "Go",
+    category: "Languages",
+    proficiency: "Advanced",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
+  },
+  {
+    name: "JavaScript",
+    category: "Languages",
+    proficiency: "Advanced",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "TypeScript",
+    category: "Languages",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "C/C++",
+    category: "Languages",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+  },
+  {
+    name: "SQL",
+    category: "Languages",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  },
+
+  // Frameworks
+  {
+    name: "React.js",
+    category: "Frameworks",
+    proficiency: "Advanced",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+  },
+  {
+    name: "Next.js",
+    category: "Frameworks",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "Node.js",
+    category: "Frameworks",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "Express.js",
+    category: "Frameworks",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+  },
+  {
+    name: "Gin-Gonic",
+    category: "Frameworks",
+    proficiency: "Advanced",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
+  },
+  {
+    name: "gRPC / Protobuf",
+    category: "Frameworks",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grpc/grpc-original.svg",
+  },
+  {
+    name: "Tailwind CSS",
+    category: "Frameworks",
+    proficiency: "Advanced",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    name: "Material-UI",
+    category: "Frameworks",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
+  },
+
+  // Tools & DBs
+  {
+    name: "Git",
+    category: "Tools",
+    proficiency: "Advanced",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+  },
+  {
+    name: "Docker",
+    category: "Tools",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+  },
+  {
+    name: "Postman",
+    category: "Tools",
+    proficiency: "Advanced",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    category: "Tools",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "MongoDB",
+    category: "Tools",
+    proficiency: "Intermediate",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "VS Code",
+    category: "Tools",
+    proficiency: "Advanced",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+  },
+];

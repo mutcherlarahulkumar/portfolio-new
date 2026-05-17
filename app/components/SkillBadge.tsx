@@ -1,29 +1,25 @@
-'use client';
-import { motion } from 'framer-motion';
+'use client'
+import { motion } from 'framer-motion'
 
 interface Skill {
-  name: string;
-  logo: string;
-  proficiency: string;
+  name: string
+  logo: string
+  proficiency: string
+  category?: string
 }
 
-interface SkillBadgeProps {
-  skill: Skill;
-}
-
-const SkillBadge = ({ skill }: SkillBadgeProps) => {
+export default function SkillBadge({ skill }: { skill: Skill }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="flex items-center p-4 m-2 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow"
-    >
-      <img src={skill.logo} alt={skill.name}  className='w-10 h-10 p-2'/>
-      <div className="ml-3">
-        <h3 className="font-bold text-gray-800">{skill.name}</h3>
-        <p className="text-sm text-gray-500">{skill.proficiency}</p>
-      </div>
+    <motion.div whileHover={{ y: -2 }} className="skill-pill">
+      <img
+        src={skill.logo}
+        alt={skill.name}
+        className="w-5 h-5 object-contain flex-shrink-0"
+        onError={(e) => {
+          ;(e.target as HTMLImageElement).style.display = 'none'
+        }}
+      />
+      <span className="text-sm text-slate-300 font-medium">{skill.name}</span>
     </motion.div>
-  );
-};
-
-export default SkillBadge;
+  )
+}

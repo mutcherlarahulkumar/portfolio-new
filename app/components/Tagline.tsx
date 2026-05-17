@@ -1,23 +1,24 @@
-import { Typewriter } from 'react-simple-typewriter';
+'use client'
+import { Typewriter } from 'react-simple-typewriter'
 
-const Tagline = () => {
+export default function Tagline() {
   return (
-    <p className="text-xl md:text-2xl text-[#7c3aed]">
+    <span>
       <Typewriter
         words={[
-          "Full Stack Developer",
-          "MERN Enthusiast",
-          "AI Enthusiast in Training"
+          'Backend Developer',
+          'Go Engineer',
+          'Full Stack Developer',
+          'Microservices Architect',
+          'API Design Specialist',
         ]}
         loop={true}
         cursor
         cursorStyle="|"
         typeSpeed={70}
-        deleteSpeed={50}
-        delaySpeed={1500}
+        deleteSpeed={40}
+        delaySpeed={1800}
       />
-    </p>
-  );
-};
-
-export default Tagline;
+    </span>
+  )
+}
